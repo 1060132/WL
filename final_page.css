@@ -207,7 +207,7 @@ body {
     opacity: 1;
     transition: 0.3s;
     border-radius: 10px;
-    color: black;
+    color: black !important; 
 }
 
 .choose_tabak {
