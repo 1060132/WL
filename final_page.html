@@ -142,7 +142,7 @@
     var count = 0;
     var price_count = 0;
     var imageCount = 0;
-    const belegte_sitze = [];
+    var belegte_sitze = [];
 function choose_seat(clicked_id) {
     var chosen_seat = event.target.className;
     if(belegte_sitze.includes(chosen_seat)){
@@ -150,12 +150,17 @@ function choose_seat(clicked_id) {
     }
     else{
         var seats_section = document.querySelector(".chosen_seats");
-        var element = document.createElement("p");
+        var element = document.createElement("a");
         // Verwende querySelector, um das Element mit der Klasse zu selektieren
         var seat_element = document.querySelector("." + chosen_seat);
         // Überprüfe, ob ein Element gefunden wurde, bevor du seinen Wert abrufst
         var seat_number = seat_element ? seat_element.textContent : "Element nicht gefunden";
         element.textContent = seat_number;
+        element.classList.add("chosen_seat")
+        element.setAttribute("id", seat_number);
+        element.addEventListener("click", function(){
+            removeSeat(seat_number);
+        })
         seats_section.appendChild(element);
         count++;
         belegte_sitze.push(chosen_seat);
@@ -209,6 +214,15 @@ function removeElement(clicked_tabak){
     calculate_price(count);
 }
 
+function removeSeat(clicked_seat){
+    var seat_class = numberToWords(clicked_seat);
+    document.getElementById(clicked_seat).remove();
+    count -=1;
+    calculate_price(count);
+    filtered = belegte_sitze.filter(seat => seat !== seat_class);
+    belegte_sitze = filtered;
+}
+
 
 function calculate_price(count){
     if(price_count != 0){
@@ -236,6 +250,8 @@ function calculate_price(count){
     }
 }
 
+
+
 function showIMG() {
     console.log(imageCount);
     if(imageCount >= 1){
@@ -249,6 +265,24 @@ function showIMG() {
     img.classList.add("easterbrock-image"); // Ändere den Klassennamen für das Bild
     section.appendChild(img);
     imageCount++;
+    }
+}
+
+function numberToWords(number) {
+    const units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+                   'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+    const tens = ['', '', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+    
+    if (number === 0) return 'zero';
+    
+    if (number < 20) {
+        return units[number];
+    } else if (number < 100) {
+        return tens[Math.floor(number / 10)] + units[number % 10];
+    } else if (number < 1000) {
+        return units[Math.floor(number / 100)] + ' hundred ' + numberToWords(number % 100);
+    } else {
+        return 'Number out of range';
     }
 }
 
