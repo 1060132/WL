@@ -90,9 +90,8 @@ body {
     background-color: #f8f9fa;
     font-size: medium;
     transition: 0.3s;
-    color: bl;
     margin-bottom: 50px;
-    border-radius: 10px;
+    color: bl;
 }
 
 
@@ -207,7 +206,6 @@ body {
     opacity: 1;
     transition: 0.3s;
     border-radius: 10px;
-    color: black !important; 
 }
 
 .choose_tabak {
@@ -268,3 +266,8 @@ body {
 .easterbrock-image {
     width: 50%;
 }
+
+.chosen_seat{
+    margin-right: 10px;
+}
+
