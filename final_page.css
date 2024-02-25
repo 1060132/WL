@@ -200,14 +200,12 @@ body {
 }
 
 .calculate-price{
-    
     padding: 10px;
     font-family: "MedievalSharp", cursive;
     background-color: #f8f9fa;
     font-size: medium;
+    opacity: 1;
     transition: 0.3s;
-    margin-bottom: 50px;
-    color: black;
     border-radius: 10px;
 }
 
