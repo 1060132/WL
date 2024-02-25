@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Hookah Rails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./favicon-32x32.png">
+    <link rel="stylesheet" href="./booking.css">
+
+</head>
+<body>
+    <a href="./landing_page.html"><div class="logo-pic"><img src="./globalhookahrails.png" alt="Global Hookah Rails"></div></a>
+    <nav class="navbar-top">
+        <ul>
+            <li class="about"><a href="./landing_page.html#about">Über uns</a></li>
+            <li class="destinations"><a href="./landing_page.html#destinations">Unsere Routen</a></li>
+            <li class="shisha"><a href="./landing_page.html#tabacco">Unser Tabak</a></li>
+            <li class="event"><a href="./landing_page.html#events">Dein Event mit uns</a></li>
+        </ul>
+    </nav>
+    <section class="booking-from">
+        <h1>Buchung deiner Reise</h1>
+        <input type="text" class="from" placeholder="Von" id="from">
+        <a onclick=""><img class="change-destinations" src="./icons8-wechsel-48.png" alt="Wechseln"></a>
+    </section>
+    <section class="booking-to">
+        <input type="text" class="to" placeholder="Nach" id="to">
+    </section>
+    <section class="datepicker">
+        <h1>Wann möchtest du Reisen?</h1>
+        <input type="date" id="datemin" class="date" min="" name="datemin">
+        <input type="time" id="time" class="time", name="time">
+    </section>
+    <section class="next-page">
+        <a onclick="sucheZugreise()" class="next-page"><img src="./icons8-rechts-eingekreist-100.png"> </a>
+    </section>
+</body>
+
+<script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // Heutiges Datum erhalten
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+
+            document.getElementById('datemin').setAttribute('min', today);
+        });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.change-destinations').addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Werte der Eingabefelder erhalten
+                var fromValue = document.querySelector('.from').value;
+                var toValue = document.querySelector('.to').value;
+
+                // Tauschen der Werte
+                document.querySelector('.from').value = toValue;
+                document.querySelector('.to').value = fromValue;
+            });
+        });
+        function sucheZugreise() {
+            var start = document.getElementById("from").value;
+            var ziel = document.getElementById('to').value;
+            var datum = document.getElementById('datemin').value;
+            var zeit = document.getElementById("time").value;
+            if(start == "" || ziel == "" || datum == "" || zeit == ""){
+                alert("Bitte gib korrekte und vollständige Werte an!")
+            }
+            else{
+
+                sessionStorage.setItem("zeit", zeit);
+                var zugdetails = "Zugreise von " + start + " nach " + ziel + " am " + datum + " um ";
+                var zugreiseDetailsElement = document.getElementById('zugreise-details');
+                sessionStorage.setItem("zugdetails", zugdetails);
+                if (zugreiseDetailsElement) {
+                    zugreiseDetailsElement.innerText = zugdetails;
+                } else {
+                console.error("Element 'zugreise-details' wurde nicht gefunden.");
+                }
+                window.location.href = "./choose-train.html";
+        }
+    }
+
+</script>
+
+</html>

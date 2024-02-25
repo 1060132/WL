@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Hookah Rails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./favicon-32x32.png">
+    <link rel="stylesheet" href="./choose-train.css">
+</head>
+<body>
+    <a href="./index.html"><div class="logo-pic"><img src="./globalhookahrails.png" alt="Global Hookah Rails"></div></a>
+    <nav class="navbar-top">
+        <ul>
+            <li class="about"><a href="./index#about">Über uns</a></li>
+            <li class="destinations"><a href="./index#destinations">Unsere Routen</a></li>
+            <li class="shisha"><a href="./index.html#tabacco">Unser Tabak</a></li>
+            <li class="event"><a href="./index.html#events">Dein Event mit uns</a></li>
+        </ul>
+    </nav>
+    <div id="heading" class="heading">
+    <h1 id="header" class="header"></h1>
+    </div>
+    <section class="first-train">
+
+    </section>
+    <section class="second-train">
+
+    </section>
+    <section class="third-train">
+
+    </section>
+    <section class="fourth-train">
+
+    </section>
+    <section class="fifth-train">
+
+    </section>
+    <section class="sixth-train">
+
+    </section>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var zugdetails = sessionStorage.getItem("zugdetails");
+
+    var link;
+
+    function generateText(sectionClass, zugdetails, headingClass, linkImage, linkClass, timeAdder) {
+
+        var section = document.querySelector("." + sectionClass);
+        var added_time;
+        var zeit = sessionStorage.getItem("zeit", zeit);
+
+        function addTime(zeit,timeAdder){
+            var parts = zeit.split(":");
+            var stunden = parseInt(parts[0]);
+            var minuten = parseInt(parts[1]);
+            
+            var adderStunden = Math.floor(timeAdder/60);
+            var adderMinuten = timeAdder % 60;
+
+            stunden += adderStunden;
+            minuten += adderMinuten;
+
+            if(minuten >=60){
+                stunden += Math.floor(minuten/ 60);
+                minuten = minuten % 60;
+            }
+
+            stunden = stunden % 24;
+
+            var stundenString = stunden < 10 ? "0" + stunden : '' + stunden;
+            var minutenString = minuten < 10 ? "0" + minuten : '' + minuten;
+            var added_time = stundenString + ":" + minutenString;
+            return added_time;
+        }
+        
+        if(timeAdder){
+           added_time = addTime(zeit, timeAdder);
+        }
+        else{
+            added_time = zeit;
+        }
+
+        const train_list = ["ICE", "IC", "RE", "RB", "EB"];
+        var processed_string = zugdetails.slice(8, zugdetails.length);
+
+        let randomIndex = Math.floor(Math.random() * train_list.length);
+        processed_string = train_list[randomIndex] + processed_string + added_time;
+
+        var link = document.createElement("a");
+        link.href = "./final_page.html";
+
+        var heading = document.createElement("h1");
+        heading.textContent = processed_string;
+        if (headingClass) {
+        heading.classList.add(headingClass);
+     }
+
+        link.appendChild(heading); // Hier wird das <h1>-Element dem <a>-Tag hinzugefügt
+        section.appendChild(link);
+
+        link.addEventListener("click", save);
+        return link;
+    }
+
+    function save(){
+        var class_clicked = event.target.className;
+        chosen_train = event.target.textContent;
+        sessionStorage.setItem("chosen_train", chosen_train);
+    }
+
+
+    generateText("first-train", zugdetails, "first_train", "./icons8-pfeil-rechts-50.png", "arrow-right");
+    generateText("second-train", zugdetails , "second_train", "./icons8-pfeil-rechts-50.png" , "arrow-right", 30);
+    generateText("third-train", zugdetails , "third_train", "./icons8-pfeil-rechts-50.png" , "arrow-right", 54);
+    generateText("fourth-train", zugdetails , "fourth_train", "./icons8-pfeil-rechts-50.png" , "arrow-right", 78);
+    generateText("fifth-train", zugdetails , "fifth_train", "./icons8-pfeil-rechts-50.png" , "arrow-right", 90);
+    generateText("sixth-train", zugdetails , "sixth_train", "./icons8-pfeil-rechts-50.png" , "arrow-right", 110);
+});
+
+</script>
+</html>

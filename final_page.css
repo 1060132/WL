@@ -1,0 +1,276 @@
+/* Allgemeine Stile */
+body {
+    cursor: url("./icons/icons8-wasserpfeife-50.png"), auto;
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+}
+
+/* Header-Stile */
+.logo-pic {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo-pic img {
+    max-width: 100%; /* Maximale Breite des Bildes */
+    height: auto; /* Automatische Höhe beibehalten */
+}
+
+.navbar-top {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.navbar-top ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Ändere von margin-bottom zu margin */
+}
+
+.navbar-top li {
+    font-size: larger;
+}
+
+.navbar-top a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px 20px;
+    display: block;
+    font-size: larger;
+}
+
+.navbar-top a:hover {
+    color: gold;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media only screen and (max-width: 768px) {
+    .navbar-top ul {
+        flex-direction: column;
+    }
+
+    .navbar-top li {
+        margin-bottom: 10px;
+    }
+
+    .navbar-top {
+        position: relative;
+    }
+}
+
+.chosen_section {
+    text-align: center;
+}
+
+.chosen_train {
+    font-size: 1.75rem;
+}
+
+.enter_details {
+    text-align: center;
+}
+
+.enter_email {
+    font-family: "MedievalSharp", cursive;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: medium;
+}
+
+.book {
+    padding: 10px;
+    font-family: "MedievalSharp", cursive;
+    background-color: #f8f9fa;
+    font-size: medium;
+    opacity: 1;
+    transition: 0.3s;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.book:hover {
+    background-color: lightgreen;
+    padding: 20px;
+    font-size: larger;
+    opacity: 1;
+}
+
+.train-pic {
+    width: 420px;
+    max-width: 100%; /* Damit das Bild auf kleinen Bildschirmen nicht überläuft */
+}
+
+.seating-chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: auto; /* Horizontales Scrollen, wenn nötig */
+}
+
+.train_outline {
+    width: 250px;
+    height: 700px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 55px;
+    position: relative; /* Positionieren des .train_outline-Elements */
+    overflow-y: auto; /* Vertikales Scrollen, wenn nötig */
+    cursor: pointer auto;
+}
+
+.seat_left2 {
+    margin-left: 215px; /* Anpassung an die gewünschte Position */
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    position: absolute; /* Position relativ zum nächsten positionierten Elternelement */
+    margin-top: 2px;
+    text-align: center;
+    background-color: green;
+    color: #222;
+    border-radius: 10px;
+    
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    text-align: center;
+}
+
+
+.seat {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 2px; /* Abstand zwischen den Sitzen */
+    margin-bottom: 20px;
+    background-color: green;
+    color: #222;
+    text-align: center;
+    border-radius: 10px;
+}
+.divider {
+    width: 247px;
+    height: 1px;
+    border: 3px solid black;
+    margin-top: -10px;
+}
+
+.seat_left {
+    margin-left: 100px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    margin-top: 2px;
+    text-align: center;
+    background-color: green;
+    color: #222;
+    border-radius: 10px;
+}
+
+.seat:hover{
+    background-color: white;
+    color: black;
+}
+
+.seat_left:hover{
+    background-color: white;
+    color: black;
+}
+
+.seat_left2:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.chosen_seats{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price{
+    text-align: center;
+}
+
+.calculate-price{
+    
+    padding: 10px;
+    font-family: "MedievalSharp", cursive;
+    background-color: #f8f9fa;
+    font-size: medium;
+    transition: 0.3s;
+    margin-bottom: 50px;
+    color: bl;
+}
+
+.choose_tabak {
+    padding: 10px;
+    font-family: "MedievalSharp", cursive;
+    background-color: #f8f9fa;
+    font-size: medium;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 10px;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.tabak {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.tabak-content {
+    display: none;
+    position: absolute; /* changed to absolute positioning */
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.tabak-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.tabak-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover of .choose_tabak */
+.choose_tabak:hover + .tabak-content,
+.tabak-content:hover {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.choose_tabak:hover {
+    background-color: #3e8e41;
+}
+
+/* Adjusting image width */
+.easterbrock-image {
+    width: 50%;
+}

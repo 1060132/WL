@@ -1,0 +1,326 @@
+/* Allgemeine Stile */
+body {
+    cursor: url("./icons/icons8-wasserpfeife-50.png"), auto;
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+}
+
+/* Header-Stile */
+.logo-pic {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo-pic img {
+    max-width: 100%; /* Maximale Breite des Bildes */
+    height: auto; /* Automatische Höhe beibehalten */
+}
+
+.navbar-top {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.navbar-top ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Ändere von margin-bottom zu margin */
+}
+
+.navbar-top li {
+    font-size: larger;
+}
+
+.navbar-top a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px 20px;
+    display: block;
+    font-size: larger;
+}
+
+.navbar-top a:hover {
+    color: gold;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media only screen and (max-width: 768px) {
+    .navbar-top ul {
+        flex-direction: column;
+    }
+
+    .navbar-top li {
+        margin-bottom: 10px;
+    }
+
+    .navbar-top {
+        position: relative;
+    }
+}
+
+/* Abschnittsstile */
+.about-title,
+.destinations-title,
+.tabacco-title,
+.trains-title,
+.events-title {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.about-div,
+.destinations-div,
+.tabacco-div,
+.trains-div,
+.events-div {
+    padding: 0 20px; /* Ändere von padding-left und padding-right zu padding */
+    background-color: #f8f9fa;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.booking-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    transition: 0.2s;
+}
+
+.booking-icon a p {
+    display: none;
+    text-align: center;
+    margin-top: 5px;
+    background-color: white; /* Hintergrundfarbe des Textes */
+    padding: 5px; /* Abstand zwischen Text und Hintergrund */
+    border-radius: 5px; /* Runde die Ecken des Hintergrunds */
+    text-decoration: none;
+    color: black;
+}
+
+.booking-icon a:hover p {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .booking-icon {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.booking-icon a p:visited{
+    text-decoration: none;
+    color: black;
+}
+
+body:hover{
+    cursor: url("../icons/icons8-wasserpfeife-50.png"), auto;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.verkehrspartner {
+    text-align: center;
+}
+
+/* Anpassungen für verschiedene Verkehrspartner */
+.db {
+    width: 150px;
+    transition: 0.2s;
+}
+
+.db:hover {
+    width: 165px;
+}
+
+.eurobahn {
+    width: 200px;
+    transition: 0.2s;
+}
+
+.eurobahn:hover {
+    width: 215px;
+}
+
+.db-regio {
+    width: 300px;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.db-regio:hover {
+    width: 315px;
+    margin-right: 10px;
+}
+
+.westfahlenbahn {
+    width: 200px;
+    transition: 0.2s;
+}
+
+.westfahlenbahn:hover {
+    width: 215px;
+}
+
+/* Bildcontainer-Stile */
+#imageContainer {
+    display: flex;
+    justify-content: center; /* Bilder horizontal zentrieren */
+    align-items: center; /* Bilder vertikal zentrieren */
+    height: 250px;
+}
+
+#imageContainer div {
+    margin-right: 10px; /* Abstand zwischen den Bildern */
+}
+
+/* Optional: Stile für die Buttons */
+#prevButton,
+#nextButton {
+    margin-top: 10px; /* Abstand zu den Bildern */
+}
+
+#tabakContainer,
+#eventsContainer {
+    justify-content: center;
+    display: flex;
+    overflow-x: auto; /* Horizontales Scrollen ermöglichen */
+    height: 250px;
+}
+
+#tabakContainer div,
+#eventsContainer div {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px){
+    #tabakContainer div {
+        margin-right: 5px; /* Abstand zwischen den Bildern */
+    }
+}
+
+/* Tabak-Stile */
+.hamburg-tabak,
+.beach-vibes,
+.juicy-puzzy {
+    max-width: 100%;
+    height: auto;
+    width: 175px;
+    transition: 0.2s;
+}
+
+.ice-bomb{
+    max-width: 100%;
+    height: auto;
+    width: 175px;
+    transition: 0.2s;
+}
+
+.ringle-rangle{
+    max-width: 100%;
+    height: auto;
+    width: 175px;
+    padding-top: 27px;
+    transition: 0.2s;
+}
+
+.al-massiva{
+    max-width: 100%;
+    height: auto;
+    width: 175px;
+    transition: 0.2s;
+    padding-top: 40px;
+}
+
+.hamburg-tabak:hover,
+.beach-vibes:hover,
+.ringle-rangle:hover,
+.al-massiva:hover,
+.ice-bomb:hover,
+.juicy-puzzy:hover {
+    width: 190px;
+}
+
+/* CSS für kleine Bildschirme */
+@media only screen and (max-width: 768px) {
+    /* Bildcontainer-Stile für normale Bilder */
+    #imageContainer {
+        overflow-x: auto; /* Horizontales Scrollen ermöglichen */
+        white-space: nowrap; /* Verhindern, dass Bilder umgebrochen werden */
+        display: flex;
+        justify-content: flex-start; /* Bilder von links ausrichten */
+        align-items: center; /* Bilder vertikal zentrieren */
+        height: 250px;
+    }
+
+    #imageContainer div {
+        margin-right: 10px; /* Abstand zwischen den Bildern */
+        height: 250px;
+    }
+        /* Anpassungen für Tabakcontainer und Eventcontainer auf kleineren Bildschirmen */
+        #tabakContainer,
+        #eventsContainer {
+            justify-content: flex-start; /* Links ausrichten */
+        }
+        #eventsContainer .Klassenfahrt,
+        #eventsContainer .Firmenfeier{
+                width: 250px; /* Neue Breite */
+                max-width: 100%; /* Maximale Breite */
+                height: auto; /* Automatische Höhe beibehalten */
+                transition: 0.2s; /* Übergangseffekt */
+            }
+            #eventsContainer .Hochzeit{
+                display: none;
+            }
+            #eventsContainer .hochzeit_text{
+                display: none;
+            }
+
+}
+
+
+
+
+
+.Klassenfahrt,
+.Firmenfeier{
+    max-width: 100%;
+    height: auto;
+    width: 230px;
+    transition: 0.2s;
+}
+
+.Hochzeit:hover,
+.Klassenfahrt:hover,
+.Firmenfeier:hover{
+    width: 250px;
+}
+
+.Hochzeit{
+    width: 254px;
+    max-width: 100%;
+    height: auto;
+    transition: 0.2s;
+}
+
+.Hochzeit:hover{
+    width: 274px;
+}

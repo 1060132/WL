@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Hookah Rails</title>
+    <link rel="icon" type="image/x-icon" href="../icons/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./final_page.css">
+</head>
+    <body>
+     <div class="logo-pic"><a href="./index.html"><img src="./globalhookahrails.png" alt="Global Hokkah Rails"></a></div>
+     <nav class="navbar-top">
+        <ul>
+            <li class="about"><a href="./index.html#about">Über uns</a></li>
+            <li class="destinations"><a href="./index.html#destinations">Unsere Routen</a></li>
+            <li class="shisha"><a href="./index.html#tabacco">Unser Tabak</a></li>
+            <li class="event"><a href="./index.html#events">Dein Event mit uns</a></li>
+        </ul>
+    </nav>
+    <section class="chosen_section" id="chosen_section">
+        <h1 class="chosen_title">Deine Reise:</h1>
+    </section>
+    <div class="title"><h1 class="choose-seat">Suche dir einen Platz aus!</h1></div>
+    <section class="seating-chooser">
+        <div class="train_outline">
+            <div class="row">
+                <div class="seat"><a class="one" onClick="choose_seat(this.id)">1</a></div>
+                <div class="seat"><a class="two" onClick="choose_seat(this.id)">2</a></div>
+                <div class="seat_left"><a class="three" onClick="choose_seat(this.id)">3</a></div>
+                <div class="seat_left2"><a class="four">4</a></div>
+            </div>
+            <div class="row">
+                <div class="seat"><a class="five" onClick="choose_seat(this.id)">5</a></div>
+                <div class="seat"><a class="six" onClick="choose_seat(this.id)">6</a></div>
+                <div class="seat_left"><a class="seven" onClick="choose_seat(this.id)">7</a></div>
+                <div class="seat_left2"><a class="eight" onClick="choose_seat(this.id)">8</a></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="seat"><a class="nine" onClick="choose_seat(this.id)">9</a></div>
+                <div class="seat"><a class="ten" onClick="choose_seat(this.id)">10</a></div>
+                <div class="seat_left"><a class="eleven" onClick="choose_seat(this.id)">11</a></div>
+                <div class="seat_left2"><a class="twelve" onClick="choose_seat(this.id)">12</a></div>
+            </div>
+            <div class="row">
+                <div class="seat"><a class="thirteen" onClick="choose_seat(this.id)">13</a></div>
+                <div class="seat"><a class="fourteen" onClick="choose_seat(this.id)">14</a></div>
+                <div class="seat_left"><a class="fifteen" onClick="choose_seat(this.id)">15</a></div>
+                <div class="seat_left2"><a class="sixteen" onClick="choose_seat(this.id)">16</a></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="seat"><a class="seventeen" onClick="choose_seat(this.id)">17</a></div>
+                <div class="seat"><a class="eighteen" onClick="choose_seat(this.id)">18</a></div>
+                <div class="seat_left"><a class="nineteen" onClick="choose_seat(this.id)">19</a></div>
+                <div class="seat_left2"><a class="twenty" onClick="choose_seat(this.id)">20</a></div>
+            </div>
+            <div class="row">
+                <div class="seat"><a class="twentyone" onClick="choose_seat(this.id)">21</a></div>
+                <div class="seat"><a class="twentytwo" onClick="choose_seat(this.id)">22</a></div>
+                <div class="seat_left"><a class="twentythree" onClick="choose_seat(this.id)">23</a></div>
+                <div class="seat_left2"><a class="twentyfour" onClick="choose_seat(this.id)">24</a></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="seat"><a class="twentfive" onClick="choose_seat(this.id)">25</a></div>
+                <div class="seat"><a class="twentysix" onClick="choose_seat(this.id)">26</a></div>
+                <div class="seat_left"><a class="twentyseven" onClick="choose_seat(this.id)">27</a></div>
+                <div class="seat_left2"><a class="twentyeight" onClick="choose_seat(this.id)">28</a></div>
+            </div>
+            <div class="row">
+                <div class="seat"><a class="twentynine" onClick="choose_seat(this.id)">29</a></div>
+                <div class="seat"><a class="thirty" onClick="choose_seat(this.id)">30</a></div>
+                <div class="seat_left"><a class="thirtyone" onClick="choose_seat(this.id)">31</a></div>
+                <div class="seat_left2"><a class="thirtytwo" onClick="choose_seat(this.id)">32</a></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="seat"><a class="thirtythree" onClick="choose_seat(this.id)">33</a></div>
+                <div class="seat"><a class="thirtyfour" onClick="choose_seat(this.id)">34</a></div>
+                <div class="seat_left"><a class="thirtyfive" onClick="choose_seat(this.id)">35</a></div>
+                <div class="seat_left2"><a class="thirtysix" onClick="choose_seat(this.id)">36</a></div>
+            </div>
+            <div class="row">
+                <div class="seat"><a class="thirtyseven" onClick="choose_seat(this.id)">37</a></div>
+                <div class="seat"><a class="thirtyeight" onClick="choose_seat(this.id)">38</a></div>
+                <div class="seat_left"><a class="thirtynine" onClick="choose_seat(this.id)">39</a></div>
+                <div class="seat_left2"><a class="fourty" onClick="choose_seat(this.id)">40</a></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="seat"><a class="fourtyone" onClick="choose_seat(this.id)">41</a></div>
+                <div class="seat"><a class="fourtytwo" onClick="choose_seat(this.id)">42</a></div>
+                <div class="seat_left"><a class="fourtythree" onClick="choose_seat(this.id)">43</a></div>
+                <div class="seat_left2"><a class="fourtyfour" onClick="choose_seat(this.id)">44</a></div>
+            </div>
+            <div class="row">
+                <div class="seat"><a class="fourtyfive" onClick="choose_seat(this.id)">45</a></div>
+                <div class="seat"><a class="fourtysix" onClick="choose_seat(this.id)">46</a></div>
+                <div class="seat_left"><a class="fourtyseven" onClick="choose_seat(this.id)">47</a></div>
+                <div class="seat_left2"><a class="fourtyeight" onClick="choose_seat(this.id)">48</a></div>
+            </div>            
+            <!-- Weitere Sitzreihen hier einfügen, bis der train_outline voll ist -->
+        </div>
+    </section>
+    <section class="chosen_seats">
+        <h2>Gewählte Plätze:</h2>
+    </section>
+    </section>
+    <div class="tabak">
+        <button class="choose_tabak">Tabak auswählen</button>
+        <div class="tabak-content">
+            <a onclick="getTabak()" class="hamburg">187 Hamburg</a>
+            <a onclick="getTabak()" class="beach-vibes">187 Beach Vibes</a>
+            <a onclick="getTabak()" class="juicy-puzzy">187 Juicy Puzzy</a>
+            <a onclick="getTabak()" class="true-passion">True Passion</a>
+            <a onclick="getTabak()" class="ice-bomb">Holster Ice Bomb</a>
+            <a onclick="getTabak()" class="bruderherz">AlMassiva Bruderherz</a>
+        </div>
+        <h2>Ausgewählte Sorten:</h2>
+        <div class="chosen_tabak">
+
+        </div>
+    </div>
+    <section class="price">
+        <button type="submit" class="book" onclick="calculate_price(count)">Preis berechnen</button>
+        <h2 class="price-title">Endpreis:</h2>
+        <div class="price_calc">
+
+        </div>
+    </section>
+    <section class="enter_details">
+        <button class="book" onclick="showIMG()">Buche jetzt verbindlich!</button>
+        <div class="easterbrock">
+
+        </div>
+    </section>
+    </body>
+    <script>
+    var count = 0;
+    var price_count = 0;
+    const belegte_sitze = [];
+function choose_seat(clicked_id) {
+    var chosen_seat = event.target.className;
+    if(belegte_sitze.includes(chosen_seat)){
+        alert("Der Sitz ist schon belegt")
+    }
+    else{
+        var seats_section = document.querySelector(".chosen_seats");
+        var element = document.createElement("p");
+        // Verwende querySelector, um das Element mit der Klasse zu selektieren
+        var seat_element = document.querySelector("." + chosen_seat);
+        // Überprüfe, ob ein Element gefunden wurde, bevor du seinen Wert abrufst
+        var seat_number = seat_element ? seat_element.textContent : "Element nicht gefunden";
+        element.textContent = seat_number;
+        seats_section.appendChild(element);
+        count++;
+        belegte_sitze.push(chosen_seat);
+    }
+}
+
+
+function getTabak(){
+    var chosen_tabak = event.target.className;
+    var tabak_div = document.querySelector(".chosen_tabak")
+    var tabak_element = document.createElement("p");
+    var tabak_id;
+
+    var tabak = document.querySelector("." + chosen_tabak);
+    var tabak_sorte = tabak ? tabak.textContent: "Element nicht gefunden";
+    tabak_element.textContent = tabak_sorte;
+
+    switch(tabak_sorte){
+    case "187 Hamburg":
+        tabak_id = "hamburg";
+        break
+    case "187 Beach Vibes":
+        tabak_id="beach-vibes";
+        break
+    case "187 Juicy Puzzy":
+        tabak_id = "juicy-puzzy";
+        break
+    case "True Passion":
+        tabak_id = "true-passion";
+        break
+    case "Holster Ice Bomb": 
+        tabak_id = "ice-bomb";
+        break
+    case "AlMassiva Bruderherz": 
+        tabak_id = "almassiva";
+    }
+    tabak_element.classList.add("tabak_sorte_gewählt");
+    tabak_element.setAttribute("id", tabak_id);
+    tabak_element.addEventListener("click", function() {
+    removeElement(tabak_id);
+});
+    tabak_div.appendChild(tabak_element);
+    count++;
+}
+
+function removeElement(clicked_tabak){
+    document.getElementById(clicked_tabak).remove();
+    count-=1;
+}
+
+
+function calculate_price(count){
+    if(price_count != 0){
+        document.getElementById("price").remove()
+        var price = (count*2) * 11.87 + (count/2)*20.76;
+        price = Math.round(price) + "€";
+        var price_div = document.querySelector(".price_calc");
+
+        var price_element = document.createElement("p");
+        price_element.textContent = price;
+        price_element.setAttribute("id", "price");
+        price_div.appendChild(price_element);
+        price_count++;
+    }
+    else{
+        var price = (count*2) * 11.87 + (count/2)*24.76;
+        price = Math.round(price) + "€";
+        var price_div = document.querySelector(".price_calc");
+
+        var price_element = document.createElement("p");
+        price_element.textContent = price;
+        price_element.setAttribute("id", "price");
+        price_div.appendChild(price_element);
+        price_count++;
+    }
+}
+
+function showIMG() {
+    var section = document.querySelector(".easterbrock");
+    var img = document.createElement("img");
+    img.src = "./qr-code.png";
+    img.alt = "easterbrock";
+    img.classList.add("easterbrock-image"); // Ändere den Klassennamen für das Bild
+    section.appendChild(img);
+}
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var chosen_train = sessionStorage.getItem("chosen_train", chosen_train);
+            console.log(chosen_train);
+            var img_path;
+
+
+            function generateTrain(chosen_train, sectionClass, chosen_class){
+                var train_type = chosen_train.slice(0,3);
+                if(train_type.includes("ICE")){
+                    img_path = "./1603-ice-deutsche-bahn-wallpaper-hd.jpg";
+                }
+                else if(train_type.includes("IC")){
+                    img_path = "./intercity152_v-fullhd.jpg";
+                }
+                else if(train_type.includes("RE")){
+                    img_path = "./RE8_web-1065.jpg";
+                }
+                else if(train_type.includes("RB")){
+                    img_path = "./7W4LWTFH7FEXXL4OQVKPFUXNTA.jpg"
+                }
+                else if(train_type.includes("EB")){
+                    img_path = "./Eurobahn_-_Rahden.jpg"
+                }
+                console.log(img_path);
+                var section = document.querySelector("." + sectionClass);
+                var link = document.createElement("p");
+                link.textContent = chosen_train;
+
+                if(chosen_class){
+                    link.classList.add(chosen_class)
+                }
+
+                var img = document.createElement("img");
+                img.src = img_path;
+                img.alt = train_type;
+                img.classList.add("train-pic");
+
+                section.appendChild(link);
+                section.appendChild(img);
+            }
+            generateTrain(chosen_train, "chosen_section", "chosen_train");
+
+        });
+    </script>
+</html>

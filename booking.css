@@ -1,0 +1,151 @@
+/* Allgemeine Stile */
+body {
+    cursor: url("./icons/icons8-wasserpfeife-50.png"), auto;
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+}
+
+.logo-pic {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo-pic img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-top {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.navbar-top ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Ändere von margin-bottom zu margin */
+}
+
+.navbar-top li {
+    font-size: larger;
+}
+
+.navbar-top a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px 20px;
+    display: block;
+    font-size: larger;
+}
+
+.navbar-top a:hover {
+    color: gold;
+}
+
+.booking-from h1{
+    text-align: center;
+    font-size: 2rem;
+}
+.booking-from{
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+input[type="text"]{
+    display: block;
+    margin: 0 auto;
+    width: 90%; /* Ändere von 25% auf 90% für kleinere Bildschirme */
+    max-width: 300px; /* Begrenze die maximale Breite */
+}
+
+.booking-from,
+.booking-to {
+    display: flex; /* Flexbox verwenden */
+    flex-direction: column; /* Elemente vertikal anordnen */
+    align-items: center; /* Elemente horizontal zentrieren */
+}
+
+.change-destinations {
+    margin-top: 10px; /* Abstand zum vorherigen Element */
+    width: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Styles für kleinere Bildschirme */
+    input[type="text"] {
+        width: 90%; /* Breite auf 90% für kleinere Bildschirme ändern */
+        max-width: none; /* Maximale Breite aufheben */
+    }
+}
+
+
+.to{
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: gold;
+    margin: 5px;
+    font-family: "MedievalSharp", cursive;
+}
+
+.from{
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: gold;
+    font-family: "MedievalSharp", cursive;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-top ul {
+        flex-direction: column;
+    }
+
+    .navbar-top li {
+        margin-bottom: 10px;
+    }
+    .navbar-top{
+        position: relative;
+    }
+}
+
+
+.datepicker{
+    display: flex; /* Flexbox verwenden */
+    flex-direction: column; /* Elemente vertikal anordnen */
+    align-items: center; /* Elemente horizontal zentrieren */
+    margin-top: 20px;
+}
+
+.date{
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: gold;
+    font-family: "MedievalSharp", cursive;
+}
+
+.next-page{
+    margin-top: 40px;
+    display: flex; /* Flexbox verwenden */
+    flex-direction: column; /* Elemente vertikal anordnen */
+    align-items: center; /* Elemente horizontal zentrieren */
+}
+
+.time{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-width:1px;
+    font-family: "MedievalSharp", cursive;
+    border-color: gold;
+}

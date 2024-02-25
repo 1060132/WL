@@ -1,0 +1,98 @@
+/* Allgemeine Stile */
+body {
+    cursor: url("./icons/icons8-wasserpfeife-50.png"), auto;
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+}
+
+.logo-pic {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo-pic img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-top {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    text-align: center;
+}
+
+.navbar-top ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Ändere von margin-bottom zu margin */
+}
+
+.navbar-top li {
+    font-size: larger;
+}
+
+.navbar-top a {
+    text-decoration: none;
+    color: #222;
+    padding: 10px 20px;
+    display: block;
+    font-size: larger;
+}
+
+.navbar-top a:hover {
+    color: gold;
+}
+
+.booking-from h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.first-train,
+.second-train,
+.third-train,
+.fourth-train,
+.fifth-train,
+.sixth-train{
+    text-align:  center;
+    width: 100%;
+    height: 70px;
+    text-decoration: none;
+}
+
+.heading{   
+    text-align: center;
+    padding: 10px;
+}
+
+.arrow-right {
+    display: inline-block; /* Damit das Bild neben dem Text angezeigt wird */
+    vertical-align: middle; /* Vertikale Ausrichtung in der Mitte */
+    margin-left: 10px; /* Abstand zwischen Text und Bild */
+}
+
+@media only screen and (max-width: 768px) {
+    /* Styles für kleinere Bildschirme */
+    .navbar-top ul {
+        flex-direction: column;
+    }
+
+    .navbar-top li {
+        margin-bottom: 10px;
+    }
+    .navbar-top{
+        position: relative;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem; /* Reduziere die Schriftgröße des h1-Titels auf kleineren Bildschirmen */
+    }
+
+    .arrow-right {
+        margin-left: 5px; /* Verringere den Abstand zwischen Text und Bild auf kleineren Bildschirmen */
+    }
+}
