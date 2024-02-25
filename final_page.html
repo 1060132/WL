@@ -160,6 +160,7 @@ function choose_seat(clicked_id) {
         seats_section.appendChild(element);
         count++;
         belegte_sitze.push(chosen_seat);
+        calculate_price(count);
     }
 }
 
@@ -200,11 +201,13 @@ function getTabak(){
 });
     tabak_div.appendChild(tabak_element);
     count++;
+    calculate_price(count);
 }
 
 function removeElement(clicked_tabak){
     document.getElementById(clicked_tabak).remove();
     count-=1;
+    calculate_price(count);
 }
 
 
