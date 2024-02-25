@@ -207,7 +207,8 @@ body {
     font-size: medium;
     transition: 0.3s;
     margin-bottom: 50px;
-    color: bl;
+    color: black;
+    border-radius: 10px;
 }
 
 .choose_tabak {
