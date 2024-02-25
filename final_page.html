@@ -234,12 +234,19 @@ function calculate_price(count){
 }
 
 function showIMG() {
+    console.log(imageCount);
+    if(imageCount >= 1){
+        alert("Es wurde schon gebucht");
+    }
+    else{
     var section = document.querySelector(".easterbrock");
     var img = document.createElement("img");
     img.src = "./qr-code.png";
     img.alt = "easterbrock";
     img.classList.add("easterbrock-image"); // Ändere den Klassennamen für das Bild
     section.appendChild(img);
+    imageCount++;
+    }
 }
 
 
