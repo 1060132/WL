@@ -111,6 +111,7 @@
     </section>
     </section>
     <div class="tabak">
+         <a onclick="click_check()"><img src="./icons8-löschen-50.png" class="close_menu"></a>
         <button class="choose_tabak">Tabak auswählen</button>
         <div class="tabak-content">
             <a onclick="getTabak()" class="hamburg">187 Hamburg</a>
@@ -248,6 +249,9 @@ function calculate_price(count){
         price_div.appendChild(price_element);
         price_count++;
     }
+}
+function click_check(){
+    console.log("clicked");
 }
 
 
